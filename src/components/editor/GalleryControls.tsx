@@ -7,6 +7,15 @@ const ControlGroup = styled.div`
   margin-bottom: 24px;
 `;
 
+const ControlHeader = styled.div`
+  font-size: 16px;
+  font-weight: 600;
+  color: #374151;
+  margin-bottom: 8px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+`;
+
 const ControlLabel = styled.label`
   display: block;
   font-size: 12px;
@@ -89,6 +98,7 @@ const GalleryControls: React.FC = () => {
   return (
     <div>
       <ControlGroup>
+        <ControlHeader>Gallery Controls</ControlHeader>
         <ControlLabel>Gallery Alignment</ControlLabel>
         <AlignmentGrid>
           {galleryAlignmentOptions.map((option) => (

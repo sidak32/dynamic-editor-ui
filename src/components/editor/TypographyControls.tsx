@@ -7,6 +7,15 @@ const ControlGroup = styled.div`
   margin-bottom: 24px;
 `;
 
+const ControlHeader = styled.div`
+  font-size: 16px;
+  font-weight: 600;
+  color: #374151;
+  margin-bottom: 8px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+`;
+
 const ControlLabel = styled.label`
   display: block;
   font-size: 12px;
@@ -118,6 +127,7 @@ const TypographyControls: React.FC = () => {
   return (
     <div>
       <ControlGroup>
+        <ControlHeader>Typography Controls</ControlHeader>
         <ControlLabel>Font Family</ControlLabel>
         <Select
           value={typography.fontFamily}
@@ -159,14 +169,6 @@ const TypographyControls: React.FC = () => {
             onChange={(e) => updateFontSize(parseInt(e.target.value))}
           />
         </RangeContainer>
-        <NumberInput
-          type="number"
-          min="10"
-          max="60"
-          value={typography.fontSize}
-          onChange={(e) => updateFontSize(parseInt(e.target.value))}
-          style={{ marginTop: "8px" }}
-        />
       </ControlGroup>
     </div>
   );
